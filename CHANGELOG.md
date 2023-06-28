@@ -16,5 +16,11 @@ Here we write upgrade and change notes.
 ✴️ MINOR version when you add functionality in a backwards compatible manner		       
 											       
 ✳️ PATCH version when you make backwards compatible bug fixes.				       
-											       
+
 --------------------------------------						       
+
+## ✳️[0.0.1] - 2023JUN27
+
+- Establish the Main window of the GUI.
+- git init
+- Project is now under version control.

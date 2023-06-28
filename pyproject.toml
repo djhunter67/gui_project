@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mgtron"
+authors = [
+  { name="Christerpher Hunter", email="chunter@cellantenna.com" },
+]
+dynamic = ["readme"]
+description = "Package for MGTron GUI, a user interface for signal generation"
+version = "0.0.1"
+requires-python = ">=3.10"
+classifiers = [
+"Programming Language :: Python :: 3",
+"License :: Other/Proprietary License",
+"Operating System :: POSIX :: Linux",
+]
+
+dependencies = [
+"dearpygui>=1.9.1",
+]
+
+[tool.setuptools.dynamic]
+readme = {file = ["README.md", "CHANGELOG.md"]}
+
+[project.optional-dependencies]
+test = [
+"pytest>=7.3.2",
+"pytest-asyncio>=0.21.0",
+"pytest-cov>=4.1.0"
+]
+
+[project.urls]
+"Source" = "https://github.com/cellantenna/mg_tron"
+
+[project.gui-scripts]
+mgtron = "src.main:main"
+
+[tools.setuptools]
+include-package-data = "True"
+
+[tool.setuptools.packages.find]
+namespaces = true
+where = ["."]
+
+[tool.setuptools.package-data]
+"*" = [
+"*.sql",
+"*.db",
+"*.json",
+"*.lock",
+"*.ttf",
+"*.log",
+"*.rst",
+"*.txt",
+"assets",
+]
